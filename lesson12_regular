@@ -1,0 +1,13 @@
+import re
+s = "AC/DCAC/DCAC/DCAC/DCAC/DCAC/DC"
+result = re.match("AC", s) # метод re match -- в данном случае ищем AC в начале строки s
+print(result) # выведено будет re.match object; span=(0,2), match="AC"
+""" то есть найден АС в местоположениие по индексу от 0 до 2 -- (span(0,2))"""
+""" метод match ищет чтоб это было именно в начале строки"""
+""" то есть если указать result = re.match("DC",s) то результат будет -  none"""
+
+""" метод search -- ищет по всей строке и возвращает первое найденное"""
+
+s = "AC/DCAC/DCAC/DCAC/DCAC/DCAC/DC"
+result = re.search("DC",s) # так как в поиске DC - то пончтно что два индекса -- 3 и 4 
+print(result) # re.match object; span=(3,5), match="DC" то есть в позиции 3 до 5 невключительно одно значение DC

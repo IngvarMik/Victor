@@ -1,0 +1,2 @@
+message = "приве"
+print ( message)
